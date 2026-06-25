@@ -6,9 +6,9 @@ services:
       - PGID=${PGID:-1000}
       - TZ=${TZ:-Etc/UTC}
     volumes:
-      - ${VOLUMES}config:/config
-      - ${VOLUMES}downloads:/downloads
-      - ${VOLUMES}data:/sync
+      - ${VOLUMES}/config:/config
+      - ${VOLUMES}/downloads:/downloads
+      - ${VOLUMES}/data:/sync
     ports:
       - ${WEB_PORT:-8888}:8888
       - ${PEER_PORT:-55555}:55555
